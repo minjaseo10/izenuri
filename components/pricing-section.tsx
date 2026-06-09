@@ -52,7 +52,8 @@ export function PricingSection() {
                 </span>
               </div>
 
-              <h3 className="mb-2 text-2xl font-bold text-foreground">특별 할인 판매</h3>
+              <h3 className="mb-1 text-2xl font-bold text-foreground">특별 할인 판매</h3>
+              <p className="mb-1 text-sm font-semibold text-primary">모델명: 102 쾌변기</p>
               <p className="mb-6 text-muted-foreground">한정 수량 소진 시 종료됩니다</p>
 
               {/* Price */}
@@ -153,6 +154,17 @@ export function PricingSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Provocation Banner */}
+        <div className="mx-auto mt-10 max-w-5xl rounded-2xl border border-red-200 bg-red-50 px-6 py-5 text-center dark:border-red-900 dark:bg-red-950/30">
+          <p className="text-lg font-bold text-foreground md:text-xl">
+            <span className="text-red-500">일단 한 달만 써보세요!</span>
+          </p>
+          <p className="mt-1 text-base font-medium text-muted-foreground md:text-lg">
+            어차피 너무 좋아서{" "}
+            <span className="font-extrabold text-red-500">반품 못 하실 테니까요.</span>
+          </p>
         </div>
 
         {/* Trust badges */}
