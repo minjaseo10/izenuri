@@ -54,7 +54,7 @@ export function ProblemSection() {
               </div>
 
               <h3 className="mb-4 text-2xl font-bold text-foreground md:text-3xl">
-                특허받은 부드러운 물줄기로
+                특허받은 노즐의 부드러운 물줄기로
                 <br />
                 <span className="text-primary">장까지 깨끗하게!</span>
               </h3>
