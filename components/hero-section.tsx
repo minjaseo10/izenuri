@@ -73,25 +73,20 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Product Image */}
+          {/* Flyer Image */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative animate-float">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl bg-card p-4 shadow-2xl border border-border">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%A0%84%EB%8B%A8%EC%A7%80%20%ED%99%9C%EC%9A%A9%20%EC%9A%A9-NBgSaLwpzqOZfQBMetdPP6NCPvGCBf.jpg"
-                  alt="이젠누리 쾌변기 제품 이미지"
+                  src="/flyer.jpg"
+                  alt="이젠누리 쾌변기 한정 특가 판매 전단지"
                   width={500}
-                  height={600}
-                  className="h-auto w-full max-w-md rounded-2xl object-cover"
+                  height={700}
+                  className="h-auto w-full max-w-md rounded-3xl object-cover"
                   priority
                 />
               </div>
-            </div>
-
-            {/* Floating badges */}
-            <div className="absolute -right-4 bottom-1/4 rounded-xl bg-primary px-4 py-3 shadow-lg hidden lg:block">
-              <p className="text-sm font-bold text-primary-foreground">3년 무상 A/S</p>
             </div>
           </div>
         </div>
