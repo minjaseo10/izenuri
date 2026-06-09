@@ -110,15 +110,27 @@ export function PricingSection() {
               <p className="mb-4 text-xl font-extrabold text-accent">(연수기) 증정!</p>
 
               {/* Images */}
-              <div className="mb-5 overflow-hidden rounded-2xl">
-                <Image
-                  src="/water-softener.jpg"
-                  alt="이온 정수 필터(연수기)"
-                  width={480}
-                  height={280}
-                  className="h-44 w-full object-cover"
-                  unoptimized
-                />
+              <div className="mb-5 grid grid-cols-2 gap-2">
+                <div className="overflow-hidden rounded-xl bg-secondary/30">
+                  <Image
+                    src="/softener-1.jpg"
+                    alt="이온 정수 필터(연수기) 정면"
+                    width={240}
+                    height={240}
+                    className="h-40 w-full object-contain p-2"
+                    unoptimized
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl bg-secondary/30">
+                  <Image
+                    src="/softener-3.jpg"
+                    alt="이온 정수 필터(연수기) 측면"
+                    width={240}
+                    height={240}
+                    className="h-40 w-full object-contain p-2"
+                    unoptimized
+                  />
+                </div>
               </div>
 
               {/* Benefits */}
