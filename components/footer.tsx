@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Phone, MapPin, Building2 } from "lucide-react"
+import { Phone, MapPin, Building2, ExternalLink } from "lucide-react"
 
 export function Footer() {
   return (
@@ -35,7 +35,7 @@ export function Footer() {
                 사용 방법
               </Link>
               <Link href="#pricing" className="hover:text-background transition-colors">
-                무료 체험 이벤트
+                특별 혜택
               </Link>
               <Link href="#trust" className="hover:text-background transition-colors">
                 회사 소개
@@ -51,12 +51,37 @@ export function Footer() {
                 <Building2 className="mt-0.5 h-4 w-4 shrink-0" />
                 <div>
                   <p>제조원: (주)단비코리아</p>
-                  <p>판매원: (주)지에스티산업</p>
+                  <p>판매원: 이젠누리 총판 (지에스티 산업)</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 <p>부산광역시 강서구 공항로767번나길 36 (대저2동)</p>
+              </div>
+            </div>
+
+            {/* Related Sites */}
+            <div className="mt-5">
+              <h3 className="mb-3 font-semibold text-sm">연관 사이트</h3>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://map.naver.com/p/entry/place/1162329141?placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606091453&locale=ko&svcName=map_pcv5&c=15.00,0,0,0,dh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg border border-background/20 bg-background/5 px-3 py-2 text-xs font-medium text-background/80 transition-colors hover:bg-background/10 hover:text-background"
+                >
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+                  지에스티 산업 네이버 플레이스
+                </a>
+                <a
+                  href="https://blog.naver.com/izennuri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg border border-background/20 bg-background/5 px-3 py-2 text-xs font-medium text-background/80 transition-colors hover:bg-background/10 hover:text-background"
+                >
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+                  이젠누리 쾌변기 네이버 블로그
+                </a>
               </div>
             </div>
           </div>
@@ -79,7 +104,7 @@ export function Footer() {
                 <Phone className="h-4 w-4" />
                 010-4558-2991
               </a>
-              <p>이젠누리 총판</p>
+              <p>이젠누리 총판 (지에스티 산업)</p>
             </div>
           </div>
         </div>
