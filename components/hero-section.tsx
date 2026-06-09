@@ -79,12 +79,13 @@ export function HeroSection() {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border">
                 <Image
-                  src="/flyer.jpg"
+                  src="/flyer.png"
                   alt="이젠누리 쾌변기 한정 특가 판매 전단지"
                   width={500}
                   height={700}
                   className="h-auto w-full max-w-md rounded-3xl object-cover"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
