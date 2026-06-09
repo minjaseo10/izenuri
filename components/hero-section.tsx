@@ -21,7 +21,7 @@ export function HeroSection() {
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-medium text-accent">
               <Gift className="h-4 w-4" />
-              한달 무료 체험 이벤트 진행중!
+              특가 판매 진행중!
             </div>
 
             {/* Main Headline */}
@@ -50,9 +50,6 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Deposit Info */}
-            <p className="mb-4 text-sm text-muted-foreground">(보증금 10만원, 설치비 3만원)</p>
-
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button 
@@ -60,7 +57,7 @@ export function HeroSection() {
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 animate-pulse-glow"
               >
-                <Link href="#contact">지금 바로 무료 신청하기</Link>
+                <Link href="#contact">지금 바로 상담 신청하기</Link>
               </Button>
               <Button 
                 asChild 
