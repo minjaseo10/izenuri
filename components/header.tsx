@@ -47,7 +47,7 @@ export function Header() {
             051-897-5532
           </a>
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-            <Link href="#contact">30일 무료체험 신청</Link>
+            <Link href="#contact">상담 예약 문의</Link>
           </Button>
         </div>
 
@@ -81,7 +81,7 @@ export function Header() {
               051-897-5532
             </a>
             <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>30일 무료체험 신청</Link>
+              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>상담 예약 문의</Link>
             </Button>
           </nav>
         </div>

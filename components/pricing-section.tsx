@@ -1,14 +1,26 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Check, Shield, ArrowRight, ShoppingBag } from "lucide-react"
+import { Check, Shield, ArrowRight, Droplets, Wrench, Star } from "lucide-react"
 
-const trialBenefits = [
-  "보증금 10만원 (체험 후 전액 환불 가능)",
-  "설치비 3만원 (구매 시 돌려드려요!)",
-  "반품 시 회수 비용 0원",
-  "반품 시 보증금 100% 환불",
+const softenerBenefits = [
+  {
+    icon: Droplets,
+    title: "부드러운 물 제공",
+    desc: "피부·모발에 순하고 세탁 세제 효과도 높아집니다.",
+  },
+  {
+    icon: Wrench,
+    title: "기기 수명 연장",
+    desc: "석회질 축적을 예방해 세탁기·보일러를 보호합니다.",
+  },
+  {
+    icon: Star,
+    title: "물 품질 개선",
+    desc: "요리·음료 맛이 달라질 만큼 물의 질이 좋아집니다.",
+  },
 ]
 
 export function PricingSection() {
@@ -22,79 +34,111 @@ export function PricingSection() {
             <span className="text-primary">특별 혜택</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            부담 없이 체험하고, 마음에 들면 구매하세요!
+            한정 수량 특가 판매 — 지금 바로 상담 신청하세요!
           </p>
         </div>
 
         {/* Pricing Cards */}
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
-          {/* Free Trial Card */}
+
+          {/* 특별 할인 Card */}
           <div className="relative overflow-hidden rounded-3xl border-2 border-primary bg-card p-8 shadow-xl">
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10" />
-            
-            <div className="relative">
-              <div className="mb-6">
-                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
-                  추천
+
+            <div className="relative flex flex-col h-full">
+              <div className="mb-5">
+                <span className="rounded-full bg-accent/10 px-3 py-1 text-sm font-semibold text-accent">
+                  한정 특가
                 </span>
               </div>
 
-              <h3 className="mb-2 text-2xl font-bold text-foreground">한달 무료 체험</h3>
-              <p className="mb-6 text-muted-foreground">30일간 부담 없이 체험해보세요</p>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">특별 할인 판매</h3>
+              <p className="mb-6 text-muted-foreground">한정 수량 소진 시 종료됩니다</p>
 
-              <div className="mb-6">
-                <span className="text-4xl font-extrabold text-primary">무료</span>
-                <span className="text-muted-foreground"> / 30일</span>
+              {/* Price */}
+              <div className="mb-6 rounded-2xl bg-primary/5 px-6 py-5">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl font-bold text-muted-foreground line-through decoration-red-500 decoration-2">
+                    63만원
+                  </span>
+                  <span className="rounded bg-red-500 px-2 py-0.5 text-xs font-bold text-white">특가</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-extrabold text-primary">45만원</span>
+                  <span className="text-lg font-semibold text-foreground">판매</span>
+                </div>
               </div>
 
-              <ul className="mb-8 space-y-3">
-                {trialBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-foreground">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Extra discount */}
+              <div className="mb-8 flex items-start gap-3 rounded-xl border border-accent/30 bg-accent/5 px-4 py-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                <p className="text-sm font-semibold text-foreground">
+                  네이버 플레이스 리뷰 및 알림 설정 시{" "}
+                  <span className="text-accent">2만원 추가 할인!</span>
+                </p>
+              </div>
+
+              <div className="mt-auto flex items-center gap-2 text-sm text-muted-foreground">
+                <Shield className="h-4 w-4 text-primary" />
+                <span>3년 무상 A/S 포함</span>
+              </div>
 
               <Button
                 asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6"
+                className="mt-6 w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6"
               >
                 <Link href="#contact">
-                  무료 체험 신청하기
+                  상담 신청하기
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Purchase Info Card */}
-          <div className="relative overflow-hidden rounded-3xl border-2 border-border bg-card p-8 shadow-xl flex flex-col justify-center">
+          {/* 연수기 증정 Card */}
+          <div className="relative overflow-hidden rounded-3xl border-2 border-border bg-card p-8 shadow-xl flex flex-col">
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-secondary/50" />
-            
-            <div className="relative text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-                  <ShoppingBag className="h-10 w-10 text-primary" />
-                </div>
+
+            <div className="relative flex flex-col h-full">
+              <div className="mb-5">
+                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
+                  구매 사은품
+                </span>
               </div>
 
-              <h3 className="mb-4 text-2xl font-bold text-foreground">한달 무료 체험 후</h3>
-              <p className="mb-6 text-3xl font-extrabold text-primary">구매 가능!</p>
-              
-              <div className="space-y-4 text-muted-foreground">
-                <p className="text-lg">
-                  먼저 체험해보고 마음에 드시면
-                  <br />
-                  그때 구매를 결정하세요.
-                </p>
-                <div className="flex items-center justify-center gap-2 text-foreground font-medium">
-                  <Shield className="h-5 w-5 text-primary" />
-                  <span>3년 무상 A/S 보장</span>
-                </div>
+              <h3 className="mb-1 text-2xl font-bold text-foreground">이온 정수 필터</h3>
+              <p className="mb-4 text-xl font-extrabold text-accent">(연수기) 증정!</p>
+
+              {/* Images */}
+              <div className="mb-5 overflow-hidden rounded-2xl">
+                <Image
+                  src="/water-softener.jpg"
+                  alt="이온 정수 필터(연수기)"
+                  width={480}
+                  height={280}
+                  className="h-44 w-full object-cover"
+                  unoptimized
+                />
               </div>
 
+              {/* Benefits */}
+              <ul className="mb-6 space-y-3">
+                {softenerBenefits.map((item) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <item.icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-foreground">{item.title}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
 
+              <div className="mt-auto rounded-xl bg-primary/5 px-4 py-3 text-center">
+                <p className="text-sm font-semibold text-primary">구매 고객 전원 증정 — 수량 한정!</p>
+              </div>
             </div>
           </div>
         </div>

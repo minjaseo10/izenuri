@@ -25,13 +25,13 @@ export function FloatingCTA() {
       {/* Mobile Bottom CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card p-3 shadow-lg md:hidden">
         <div className="flex items-center gap-2">
-          <a
-            href="tel:051-897-5532"
+          <Link
+            href="#contact"
             className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-primary bg-primary/10 py-3 font-semibold text-primary"
           >
             <Phone className="h-5 w-5" />
             전화 상담
-          </a>
+          </Link>
           <Button
             asChild
             className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground font-bold py-3"
@@ -52,13 +52,13 @@ export function FloatingCTA() {
             <ArrowUp className="h-5 w-5" />
           </button>
         )}
-        <a
-          href="tel:051-897-5532"
+        <Link
+          href="#contact"
           className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all hover:scale-110"
           aria-label="전화 상담"
         >
           <Phone className="h-6 w-6" />
-        </a>
+        </Link>
       </div>
     </>
   )
