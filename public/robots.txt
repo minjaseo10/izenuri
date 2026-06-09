@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.izenuri.co.kr/sitemap.xml
+Sitemap: https://www.dbk.kr/sitemap.xml
