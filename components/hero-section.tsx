@@ -50,6 +50,19 @@ export function HeroSection() {
               </div>
             </div>
 
+            {/* Impact Copy */}
+            <div className="mb-8 max-w-lg">
+              <p className="text-balance text-xl font-extrabold tracking-tight text-foreground md:text-2xl">
+                <span className="text-muted-foreground line-through decoration-accent decoration-2">&ldquo;비데가 다 똑같지 뭐&rdquo;</span>
+                <span className="text-foreground">라는 생각,</span>
+                <br />
+                <span className="text-accent">오늘로 끝납니다.</span>
+              </p>
+              <p className="mt-3 border-l-4 border-primary pl-4 text-base font-medium text-muted-foreground md:text-lg">
+                &ldquo;한 번 써보면 다른 비데 절대 못 씁니다. 진짜 완전 강추!&rdquo;
+              </p>
+            </div>
+
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button 
