@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone, MessageCircle, ExternalLink } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -40,12 +40,34 @@ export function ContactSection() {
             {/* Company Info */}
             <div className="rounded-2xl border border-border bg-background p-5">
               <p className="mb-2 text-sm text-muted-foreground">판매처</p>
-              <p className="text-xl font-bold text-foreground">이젠누리 총판</p>
+              <p className="text-xl font-bold text-foreground">이젠누리 총판 (지에스티 산업)</p>
               <p className="mt-3 text-sm text-muted-foreground">
                 영상으로 더 자세한 정보를 확인하세요!
                 <br />
                 QR 코드 스캔 시 영상 확인 가능
               </p>
+            </div>
+
+            {/* Related Sites */}
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <a
+                href="https://map.naver.com/p/entry/place/1162329141?placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606091453&locale=ko&svcName=map_pcv5&c=15.00,0,0,0,dh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-all hover:border-primary hover:shadow-md"
+              >
+                <ExternalLink className="h-4 w-4 shrink-0 text-primary" />
+                네이버 플레이스
+              </a>
+              <a
+                href="https://blog.naver.com/izennuri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-all hover:border-primary hover:shadow-md"
+              >
+                <ExternalLink className="h-4 w-4 shrink-0 text-primary" />
+                이젠누리 블로그
+              </a>
             </div>
 
             {/* KakaoTalk Button */}

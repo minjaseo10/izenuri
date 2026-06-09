@@ -52,7 +52,8 @@ export function PricingSection() {
                 </span>
               </div>
 
-              <h3 className="mb-2 text-2xl font-bold text-foreground">특별 할인 판매</h3>
+              <h3 className="mb-1 text-2xl font-bold text-foreground">특별 할인 판매</h3>
+              <p className="mb-1 text-xl font-extrabold text-primary">모델명: 102 쾌변기</p>
               <p className="mb-6 text-muted-foreground">한정 수량 소진 시 종료됩니다</p>
 
               {/* Price */}
@@ -110,15 +111,27 @@ export function PricingSection() {
               <p className="mb-4 text-xl font-extrabold text-accent">(연수기) 증정!</p>
 
               {/* Images */}
-              <div className="mb-5 overflow-hidden rounded-2xl">
-                <Image
-                  src="/water-softener.jpg"
-                  alt="이온 정수 필터(연수기)"
-                  width={480}
-                  height={280}
-                  className="h-44 w-full object-cover"
-                  unoptimized
-                />
+              <div className="mb-5 grid grid-cols-2 gap-2">
+                <div className="overflow-hidden rounded-xl bg-secondary/30">
+                  <Image
+                    src="/softener-1.jpg"
+                    alt="이온 정수 필터(연수기) 정면"
+                    width={240}
+                    height={240}
+                    className="h-40 w-full object-contain p-2"
+                    unoptimized
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl bg-secondary/30">
+                  <Image
+                    src="/softener-3.jpg"
+                    alt="이온 정수 필터(연수기) 측면"
+                    width={240}
+                    height={240}
+                    className="h-40 w-full object-contain p-2"
+                    unoptimized
+                  />
+                </div>
               </div>
 
               {/* Benefits */}
@@ -140,6 +153,21 @@ export function PricingSection() {
                 <p className="text-sm font-semibold text-primary">구매 고객 전원 증정 — 수량 한정!</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Provocation Banner */}
+        <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border-2 border-red-400 bg-gradient-to-r from-red-50 to-orange-50 shadow-lg dark:from-red-950/40 dark:to-orange-950/40 dark:border-red-700">
+          <div className="px-8 py-8 text-center md:py-10">
+            <p className="text-3xl font-extrabold tracking-tight text-red-500 md:text-4xl">
+              일단 한 달만 써보세요!
+            </p>
+            <p className="mt-3 text-xl font-semibold text-foreground md:text-2xl">
+              어차피 너무 좋아서
+            </p>
+            <p className="mt-1 text-2xl font-extrabold text-red-500 md:text-3xl">
+              반품 못 하실 테니까요.
+            </p>
           </div>
         </div>
 
