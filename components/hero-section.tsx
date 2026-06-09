@@ -75,7 +75,7 @@ export function HeroSection() {
 
           {/* Flyer Image */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative animate-float">
+            <div className="relative animate-float w-full max-w-md">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border">
                 <Image
@@ -83,9 +83,26 @@ export function HeroSection() {
                   alt="이젠누리 쾌변기 한정 특가 판매 전단지"
                   width={500}
                   height={700}
-                  className="h-auto w-full max-w-md rounded-3xl object-cover"
+                  className="h-auto w-full rounded-t-3xl object-cover"
                   priority
                 />
+                {/* 선명한 하단 정보 오버레이 */}
+                <div className="bg-[#1a3a5c] px-4 py-3 rounded-b-3xl">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#1a3a5c]">문의/예약</span>
+                        <span className="text-xs text-white/80">연락처</span>
+                        <span className="text-sm font-bold text-white">051-897-5532</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="rounded bg-white px-2 py-0.5 text-xs font-bold text-[#1a3a5c]">부산쾌변기</span>
+                        <span className="text-xs text-white/80">이젠누리 총판</span>
+                        <span className="text-xs font-medium text-white">(지에스티산업)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
