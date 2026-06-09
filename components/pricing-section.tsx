@@ -53,7 +53,7 @@ export function PricingSection() {
               </div>
 
               <h3 className="mb-1 text-2xl font-bold text-foreground">특별 할인 판매</h3>
-              <p className="mb-1 text-sm font-semibold text-primary">모델명: 102 쾌변기</p>
+              <p className="mb-1 text-xl font-extrabold text-primary">모델명: 102 쾌변기</p>
               <p className="mb-6 text-muted-foreground">한정 수량 소진 시 종료됩니다</p>
 
               {/* Price */}
@@ -157,14 +157,18 @@ export function PricingSection() {
         </div>
 
         {/* Provocation Banner */}
-        <div className="mx-auto mt-10 max-w-5xl rounded-2xl border border-red-200 bg-red-50 px-6 py-5 text-center dark:border-red-900 dark:bg-red-950/30">
-          <p className="text-lg font-bold text-foreground md:text-xl">
-            <span className="text-red-500">일단 한 달만 써보세요!</span>
-          </p>
-          <p className="mt-1 text-base font-medium text-muted-foreground md:text-lg">
-            어차피 너무 좋아서{" "}
-            <span className="font-extrabold text-red-500">반품 못 하실 테니까요.</span>
-          </p>
+        <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border-2 border-red-400 bg-gradient-to-r from-red-50 to-orange-50 shadow-lg dark:from-red-950/40 dark:to-orange-950/40 dark:border-red-700">
+          <div className="px-8 py-8 text-center md:py-10">
+            <p className="text-3xl font-extrabold tracking-tight text-red-500 md:text-4xl">
+              일단 한 달만 써보세요!
+            </p>
+            <p className="mt-3 text-xl font-semibold text-foreground md:text-2xl">
+              어차피 너무 좋아서
+            </p>
+            <p className="mt-1 text-2xl font-extrabold text-red-500 md:text-3xl">
+              반품 못 하실 테니까요.
+            </p>
+          </div>
         </div>
 
         {/* Trust badges */}
