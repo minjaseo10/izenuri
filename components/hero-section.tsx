@@ -25,18 +25,27 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="mb-4 text-balance text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              <span className="text-primary">누리 쾌변기</span>로 맞이하는
+            <h1 className="mb-3 text-balance text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-5xl">
+              <span className="relative inline-block text-muted-foreground line-through decoration-accent decoration-[3px] text-3xl md:text-4xl lg:text-4xl">
+                "비데가 다 똑같지 뭐"
+              </span>
               <br />
-              <span className="text-accent">상쾌한 아침</span>을 시작하세요!
+              <span className="text-primary">라는 생각,</span>{" "}
+              <span className="relative whitespace-nowrap">
+                <span className="relative z-10 text-accent font-black">오늘로 끝납니다.</span>
+                <span className="absolute bottom-1 left-0 z-0 h-3 w-full bg-accent/15 rounded" />
+              </span>
             </h1>
 
-            {/* Sub Headline */}
-            <p className="mb-6 max-w-lg text-pretty text-lg text-muted-foreground md:text-xl">
-              매일 아침, 날아갈 듯 가벼워지는 기분!
-              <br />
-              누리 쾌변기가 찾아왔습니다.
-            </p>
+            {/* Impact Quote */}
+            <div className="mb-6 max-w-lg rounded-2xl border-l-4 border-primary bg-primary/5 px-5 py-4">
+              <p className="text-pretty text-base font-semibold leading-relaxed text-foreground md:text-lg">
+                "한 번 써보면 다른 비데 절대 못 씁니다."
+              </p>
+              <p className="mt-1 text-sm font-bold text-accent md:text-base">
+                — 진짜 완전 강추!
+              </p>
+            </div>
 
             {/* Benefits */}
             <div className="mb-8 flex flex-wrap justify-center gap-4 lg:justify-start">
