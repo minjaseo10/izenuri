@@ -52,43 +52,61 @@ export function FeaturesSection() {
             </p>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                onClick={() => feature.hasPatent && setShowPatentModal(true)}
-                className={`group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg md:p-8 ${
-                  feature.hasPatent ? "cursor-pointer" : ""
-                }`}
-              >
-                {/* Background gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity group-hover:opacity-100" />
+          {/* 2-column layout: video left, feature cards right */}
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:gap-8 lg:items-stretch">
 
-                <div className="relative">
-                  {/* Icon and Badge */}
-                  <div className="mb-4 flex items-start justify-between">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                      <feature.icon className="h-7 w-7" />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {feature.hasPatent && (
-                        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                          클릭하여 특허증 보기
+            {/* Left: 3D autoplay video */}
+            <div className="lg:col-span-2">
+              <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-md h-full">
+                <video
+                  src="/3d_principle.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover"
+                  style={{ minHeight: "320px" }}
+                />
+              </div>
+            </div>
+
+            {/* Right: 2x2 feature cards */}
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-2 gap-4 h-full">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    onClick={() => feature.hasPatent && setShowPatentModal(true)}
+                    className={`group relative overflow-hidden rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/50 hover:shadow-lg flex flex-col ${
+                      feature.hasPatent ? "cursor-pointer" : ""
+                    }`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <div className="relative flex flex-col gap-3">
+                      {/* Icon */}
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                        <feature.icon className="h-6 w-6" />
+                      </div>
+                      {/* Badge */}
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-semibold text-accent">
+                          {feature.highlight}
                         </span>
-                      )}
-                      <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-                        {feature.highlight}
-                      </span>
+                        {feature.hasPatent && (
+                          <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
+                            특허 기술
+                          </span>
+                        )}
+                      </div>
+                      {/* Text */}
+                      <h3 className="text-base font-bold text-foreground leading-snug">{feature.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <h3 className="mb-2 text-xl font-bold text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
           </div>
         </div>
       </section>
