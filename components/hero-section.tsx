@@ -2,95 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState, useEffect, useCallback } from "react"
 import { Button } from "@/components/ui/button"
-import { Play, Gift, Sparkles, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react"
-
-const flyers = [
-  { src: "/flyer-front.png", alt: "이젠누리 102 전단지 앞면 - 제품 소개" },
-  { src: "/flyer-back.png",  alt: "이젠누리 102 전단지 뒷면 - 특허 기술 및 할인 이벤트" },
-]
-
-function FlyerCarousel() {
-  const [current, setCurrent] = useState(0)
-  const [fading, setFading] = useState(false)
-
-  const goTo = useCallback((index: number) => {
-    setFading(true)
-    setTimeout(() => {
-      setCurrent(index)
-      setFading(false)
-    }, 300)
-  }, [])
-
-  const prev = () => goTo((current - 1 + flyers.length) % flyers.length)
-  const next = useCallback(() => goTo((current + 1) % flyers.length), [current, goTo])
-
-  useEffect(() => {
-    const timer = setInterval(next, 5000)
-    return () => clearInterval(timer)
-  }, [next])
-
-  return (
-    <div className="relative w-full max-w-md">
-      {/* Glow */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
-
-      {/* Card */}
-      <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border bg-card">
-
-        {/* Image */}
-        <div className="relative aspect-[3/4] w-full">
-          <Image
-            src={flyers[current].src}
-            alt={flyers[current].alt}
-            fill
-            className={`object-contain transition-opacity duration-300 ${fading ? "opacity-0" : "opacity-100"}`}
-            priority
-            unoptimized
-          />
-
-          {/* Arrow buttons */}
-          <button
-            onClick={prev}
-            aria-label="이전 전단지"
-            className="absolute left-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 shadow-md backdrop-blur-sm transition hover:bg-background"
-          >
-            <ChevronLeft className="h-5 w-5 text-foreground" />
-          </button>
-          <button
-            onClick={next}
-            aria-label="다음 전단지"
-            className="absolute right-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 shadow-md backdrop-blur-sm transition hover:bg-background"
-          >
-            <ChevronRight className="h-5 w-5 text-foreground" />
-          </button>
-        </div>
-
-        {/* Dots */}
-        <div className="flex items-center justify-center gap-2 py-3">
-          {flyers.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              aria-label={`${i + 1}번째 전단지`}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "w-6 bg-primary"
-                  : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Label */}
-        <p className="pb-3 text-center text-xs text-muted-foreground">
-          {current + 1} / {flyers.length} — {current === 0 ? "앞면" : "뒷면"}
-        </p>
-      </div>
-    </div>
-  )
-}
+import { Play, Gift, Sparkles, CheckCircle } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -173,9 +86,22 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Flyer Carousel */}
-          <div className="flex justify-center lg:justify-end">
-            <FlyerCarousel />
+          {/* Flyer Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative animate-float w-full max-w-md">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border">
+                <Image
+                  src="/flyer.png"
+                  alt="이젠누리 쾌변기 한정 특가 판매 전단지"
+                  width={500}
+                  height={700}
+                  className="h-auto w-full rounded-3xl object-cover"
+                  priority
+                  unoptimized
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

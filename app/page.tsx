@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { ProblemSection } from "@/components/problem-section"
+import { FlyerSection } from "@/components/flyer-section"
 import { IntroVideoSection } from "@/components/intro-video-section"
 import { FeaturesSection } from "@/components/features-section"
 import { VideoSection } from "@/components/video-section"
@@ -18,7 +18,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         <HeroSection />
-        <ProblemSection />
+        <FlyerSection />
         <IntroVideoSection />
         <FeaturesSection />
         <VideoSection />
