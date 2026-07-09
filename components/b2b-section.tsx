@@ -29,11 +29,11 @@ export function B2BSection() {
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="mb-5 break-keep text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
             전문 기관이 선택한 쾌변 케어,{" "}
             <span className="text-primary">이젠누리</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-pretty text-lg text-muted-foreground">
+          <p className="mx-auto max-w-2xl break-keep text-xl leading-relaxed text-muted-foreground md:text-2xl">
             산모, 어르신, 환자분들의 편안한 일상을 위해 프리미엄 체험존을 확대하고 있습니다.
             <br className="hidden md:block" />
             병원 및 요양 시설 입점을 환영합니다.
@@ -50,8 +50,8 @@ export function B2BSection() {
               <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-primary/10">
                 <card.icon className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-lg font-bold text-foreground">{card.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{card.description}</p>
+              <h3 className="break-keep text-xl font-bold leading-snug text-foreground">{card.title}</h3>
+              <p className="break-keep text-base leading-loose text-muted-foreground">{card.description}</p>
             </div>
           ))}
         </div>

@@ -56,10 +56,10 @@ export function Footer() {
             <dl className="space-y-2.5 text-sm">
               {[
                 ["상호명", "(주)지에스티 산업"],
-                ["대표자", "서일수"],
+                ["대표자", "한복분"],
                 ["사업자등록번호", "177-88-00875"],
                 ["통신판매업 신고번호", "제 2019-부산강서구-0442 호"],
-                ["개인정보관리책임자", "서일수"],
+                ["개인정보관리책임자", "한복분"],
               ].map(([label, value]) => (
                 <div key={label} className="flex flex-wrap gap-x-2">
                   <dt className="shrink-0 text-background/40">{label}</dt>
