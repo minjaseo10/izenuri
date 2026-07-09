@@ -7,6 +7,7 @@ import { VideoSection } from "@/components/video-section"
 import { UsageSection } from "@/components/usage-section"
 import { InstallationSection } from "@/components/installation-section"
 import { PricingSection } from "@/components/pricing-section"
+import { B2BSection } from "@/components/b2b-section"
 import { TrustSection } from "@/components/trust-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
@@ -25,6 +26,7 @@ export default function HomePage() {
         <UsageSection />
         <InstallationSection />
         <PricingSection />
+        <B2BSection />
         <TrustSection />
         <ContactSection />
       </main>
