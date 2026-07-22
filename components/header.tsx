@@ -24,7 +24,7 @@ export function Header() {
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg">
             누리
           </div>
-          <span className="text-xl font-bold text-foreground">이젠누리 쾌변기</span>
+          <span className="text-xl font-bold text-foreground">이젠누리</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -47,7 +47,7 @@ export function Header() {
             051-897-5532
           </a>
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-            <Link href="#contact">상담 예약 문의</Link>
+            <Link href="#contact">30일 무료체험 신청</Link>
           </Button>
         </div>
 
@@ -81,7 +81,7 @@ export function Header() {
               051-897-5532
             </a>
             <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>상담 예약 문의</Link>
+              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>30일 무료체험 신청</Link>
             </Button>
           </nav>
         </div>

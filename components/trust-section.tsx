@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, Award, Shield, Wrench, Heart, Globe, Zap, FileCheck } from "lucide-react"
+import { Building2, Award, Shield, Wrench, Heart, Globe } from "lucide-react"
 
 export function TrustSection() {
   const trustPoints = [
@@ -20,7 +20,7 @@ export function TrustSection() {
       icon: Shield,
       title: "인증으로 증명된 신뢰",
       description:
-        "단비코리아만의 특허 기반 노즐 기술로 품질과 안전을 최우선으로 생각합니다. 엄격한 생산 및 검사 공정 운영으로 신뢰를 증명합니다.",
+        "KC 인증 준비 및 적용, 각종 품질 인증 및 시험 진행, 엄격한 생산 및 검사 공정 운영으로 품질과 안전을 최우선으로 생각합니다.",
     },
   ]
 
@@ -49,26 +49,8 @@ export function TrustSection() {
           </p>
         </div>
 
-        {/* 전기 불필요 강조 배너 */}
-        <div className="mb-16 rounded-2xl border-2 border-accent bg-gradient-to-r from-accent/10 to-primary/10 p-6 md:p-8">
-          <div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20">
-              <Zap className="h-8 w-8 text-accent" />
-            </div>
-            <div>
-              <h3 className="mb-2 text-xl font-bold text-foreground md:text-2xl">
-                전기 없이 작동하는 <span className="text-accent">기계식 쾌변기</span>
-              </h3>
-              <p className="text-muted-foreground">
-                이젠누리 쾌변기는 전기를 사용하지 않는 순수 기계식 작동 방식입니다. 
-                전기 요금 걱정 없이, 감전 위험 없이, 언제 어디서나 안전하게 사용할 수 있습니다.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* 신뢰 포인트 */}
-        <div className="mb-12 grid gap-6 md:grid-cols-3">
+        <div className="mb-16 grid gap-6 md:grid-cols-3">
           {trustPoints.map((point, index) => (
             <div
               key={index}
@@ -85,27 +67,6 @@ export function TrustSection() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* 특허 인증 섹션 */}
-        <div className="mb-16 rounded-2xl border border-border bg-background p-6 md:p-8">
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-              <FileCheck className="h-5 w-5 text-primary" />
-            </div>
-            <div className="text-center">
-              <h3 className="text-lg font-bold text-foreground">특허 기술 인증</h3>
-              <p className="text-sm text-muted-foreground">대한민국 특허청 정식 등록 특허 5건 보유</p>
-            </div>
-          </div>
-          
-          <div className="overflow-hidden rounded-xl">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uhGbkbiSuIjJel33K31cEOmAJ4EOey.png"
-              alt="단비코리아 특허증 5건 - 비데용 노즐 어셈블리, 공기 청정기용 필터 등"
-              className="w-full h-auto object-contain"
-            />
-          </div>
         </div>
 
         {/* 경험 섹션 */}
