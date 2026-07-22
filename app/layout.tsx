@@ -9,16 +9,35 @@ const notoSansKR = Noto_Sans_KR({
   variable: '--font-noto-sans-kr',
 })
 
+const BASE_URL = 'https://www.dbk.kr'
+
 export const metadata: Metadata = {
-  title: '이젠누리 쾌변기 | 특가 판매',
-  description: '특허받은 부드러운 물줄기로 장까지 깨끗하게! 한정 특가 판매 이벤트 진행 중. 잔변 걱정 끝, 속 시원한 배변. 3년 무상 A/S 보장.',
-  keywords: ['쾌변기', '비데', '변비', '관장', '이젠누리', '잔변', '배변', '특가판매', '102쾌변기'],
-  authors: [{ name: '이젠누리' }],
+  title: '이젠누리 쾌변기 | 변비 해결의 새로운 기준, 특허받은 무전원 비데',
+  description: '전기 없이 안전하게 물청소 가능한 특허받은 기계식 무전원 비데 이젠누리 102! 잔변감 없이 상쾌한 하루를 위한 부산 쾌변기(단비 코리아)를 지금 만나보세요.',
+  keywords: ['전길용 쾌변기', '부산 쾌변기', '이젠누리 쾌변기', '쾌변기', '이젠누리', '단비 코리아', '무전원 비데', '기계식 비데', '변비 해결', '잔변'],
+  authors: [{ name: '이젠누리 (단비 코리아)' }],
+  metadataBase: new URL(BASE_URL),
   openGraph: {
-    title: '이젠누리 쾌변기 | 특가 판매',
-    description: '특허받은 부드러운 물줄기로 장까지 깨끗하게! 한정 특가 판매 이벤트 진행 중.',
+    title: '이젠누리 쾌변기 | 변비 해결의 새로운 기준, 특허받은 무전원 비데',
+    description: '전기 없이 안전하게 물청소 가능한 특허받은 기계식 무전원 비데 이젠누리 102! 잔변감 없이 상쾌한 하루를 위한 부산 쾌변기(단비 코리아)를 지금 만나보세요.',
+    url: BASE_URL,
+    siteName: '이젠누리 쾌변기',
     locale: 'ko_KR',
     type: 'website',
+    images: [
+      {
+        url: '/flyer-front.png',
+        width: 800,
+        height: 1100,
+        alt: '이젠누리 102 쾌변기 - 변비 해결의 새로운 기준',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '이젠누리 쾌변기 | 변비 해결의 새로운 기준, 특허받은 무전원 비데',
+    description: '전기 없이 안전하게 물청소 가능한 특허받은 기계식 무전원 비데 이젠누리 102!',
+    images: ['/flyer-front.png'],
   },
   verification: {
     google: 'e2EWsNhl_-bCSMbimv85Nh8-5Ju9L4msxFRGTHFNFPc',
