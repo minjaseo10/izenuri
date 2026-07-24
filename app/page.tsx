@@ -8,6 +8,8 @@ import { UsageSection } from "@/components/usage-section"
 import { InstallationSection } from "@/components/installation-section"
 import { PricingSection } from "@/components/pricing-section"
 import { B2BSection } from "@/components/b2b-section"
+import { ExpertsSection } from "@/components/experts-section"
+import { PressSection } from "@/components/press-section"
 import { TrustSection } from "@/components/trust-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
@@ -27,6 +29,8 @@ export default function HomePage() {
         <InstallationSection />
         <PricingSection />
         <B2BSection />
+        <ExpertsSection />
+        <PressSection />
         <TrustSection />
         <ContactSection />
       </main>
