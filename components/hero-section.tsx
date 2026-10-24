@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Play, Gift, Sparkles, CheckCircle } from "lucide-react"
 
@@ -15,7 +14,7 @@ export function HeroSection() {
       </div>
 
       <div className="container relative mx-auto px-4 md:px-6">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+        <div className="grid gap-8 items-center">
           {/* Text Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
@@ -86,23 +85,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Flyer Image */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative animate-float w-full max-w-md">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-border">
-                <Image
-                  src="/flyer.png"
-                  alt="이젠누리 쾌변기 한정 특가 판매 전단지"
-                  width={500}
-                  height={700}
-                  className="h-auto w-full rounded-3xl object-cover"
-                  priority
-                  unoptimized
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
