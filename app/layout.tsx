@@ -60,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="bg-background scroll-smooth">
-      <body className={`${notoSansKR.className} font-sans antialiased`}>
+      <body suppressHydrationWarning className={`${notoSansKR.className} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
